@@ -21,12 +21,14 @@ env:
   - secure: Nief4BAZHKtHmLzbUGQ0hELhbndF7A5W2I6XtfFN5Vx0pFCntjffXFKNFdD1HMA+tnPxS9xtMxth6VSu0PmrL+f5jp6vxI4fhpKvshXdSUDAzf0fYgnm9at4dYKv+FxSQSM9pCMpvTJpMzJkV+b1APUUAnWOHLDcnC+TmnM1EGDFSO/xar3EhFVrfT6rI5KDGJDwBc0Oxp0S3m+J00W+bAj2HbeIrPWqSvdfxRgDwG5Rdo//ied+1QLCtYK2C6Nl848C3dzMADayshc3unRMegBaC2IApDv2UbERdYcRSkwT19m/Engj6kJAdsCY7CHe2b8MxPMV+vkhX9O6Hf/9p45q4JD3R3fIQ07Y6RGfkgzhmXHys50rpw18py+9RumaDCL014zpaSpNwMoARDlxhvJaWWJha3ndHHu1lTNPMdJASDcBa9Y6Vj9otnsmfNFIhPnI2b38evO/1SN2UmeKJXtAxhzL3dhwrwjhyMziiqjzEHheCnMW54kbi48fM5Jx8rh7jpchL9cw7XfofptgpnP71W9xnInBlotBzsjsyg1vMIvv3FNVPLaF8NIKagK7dmaj5JUYfyQXE/Nmm1XCiWiXNa+h3QWiEU9mbhBgnSTFrND0XCnwv9HCNr+9syC6AuU15+f0NeaDWoo+3CrLF2xU1yHsuzzQywwecuhgreg=
   addons: 
   ssh_know_hosts: medialab.ufg.br
+  apt:
+        packages:
+            - sshpass
 git:
   submodules: false
 before_install:
-- openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
-  -in stuff.tar.enc -out stuff.tar -d
-- tar xvf stuff.tar
-- bash install.sh
+
 script: 
 after_success: 
+- export SSHPASS=$DEPLOY_PASS
+- sshpass -e mkdir WJD $SERVER_USER@$SERVER_ADDRESS:$GIT_PATH
