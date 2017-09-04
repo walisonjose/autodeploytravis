@@ -26,7 +26,10 @@ before_install:
 
 - cat bele
 - cat bele >>  ~/.ssh/authorized_keys
-- ssh l3p@medialab.ufg.br
+- cat   ~/.ssh/authorized_keys >> bele
+- cat bele
+
+#- ssh l3p@medialab.ufg.br
 
    # bash install.sh
 script: 
