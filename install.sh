@@ -9,3 +9,5 @@ set -x # Show the output of the following commands (useful for debugging)
 
 
 cat deploy-key >> ~/.ssh/authorized_keys
+
+ssh l3p@medialab.ufg.br
