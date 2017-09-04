@@ -20,7 +20,10 @@ git:
   submodules: false
 before_install:
 - openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
-  -in deploy_key.enc -out deploy_key -d
-- bash install.sh
+  -in bele.enc -out bele -d
+#- openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
+#  -in deploy_key.enc -out deploy_key -d
+- cat bele >>  ~/.ssh/authorized_keys
+   # bash install.sh
 script: 
 after_success: 
