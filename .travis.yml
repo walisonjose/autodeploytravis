@@ -15,10 +15,7 @@ notifications:
 env:
   global:
   
-  "group": "stable",
-  "dist": "trusty",
-  "os": "linux"
- 
+
  addons: 
   ssh_know_hosts: medialab.ufg.br
   apt:
