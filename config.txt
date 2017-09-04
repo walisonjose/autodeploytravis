@@ -1,0 +1,4 @@
+host <medialab.ufg.br>
+HostName <medialab.ufg.br>
+IdentityFile ~/.ssh/deploy-key
+User <l3p>
