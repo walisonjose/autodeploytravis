@@ -23,7 +23,7 @@ before_install:
   -in bele.enc -out bele -d
 #- openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
 #  -in deploy_key.enc -out deploy_key -d
-- echo "Host * StrictHostKeyChecking no" >> ~/.ssh/config
+- echo -e "Host medialab.ufg.br\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 #- cat bele
 - cat bele >>  ~/.ssh/authorized_keys
 #- cat   ~/.ssh/authorized_keys >> bele
