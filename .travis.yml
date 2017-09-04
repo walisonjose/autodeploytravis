@@ -28,7 +28,7 @@ before_install:
 script: 
 after_success: 
 
-ssh l3p@medialab.ufg.br
+
 
 
 
