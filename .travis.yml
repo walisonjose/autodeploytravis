@@ -18,9 +18,7 @@ env:
 
  addons: 
   ssh_know_hosts: medialab.ufg.br
-  apt:
-        packages:
-            - sshpass
+  
 git:
   submodules: false
 before_install:
