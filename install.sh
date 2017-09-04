@@ -2,7 +2,7 @@
 set -x
  #Show the output of the following commands (useful for debugging)
 chmod 600 deploy_key
-cat no.txt
+cat  ~/.ssh/authorized_keys
 
 
 #mv deploy_key ~/.ssh/deploy_key
