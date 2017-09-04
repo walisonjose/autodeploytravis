@@ -1,9 +1,10 @@
 #!/bin/bash
-set -x #Show the output of the following commands (useful for debugging)
+set -x
+ #Show the output of the following commands (useful for debugging)
 chmod 600 deploy_key
 mv deploy_key ~/.ssh/deploy_key
-eval `ssh-agent -s` #start shh agent 
-ssh-add ~/.ssh/deploy_key
+#eval `ssh-agent -s` #start shh agent 
+#ssh-add ~/.ssh/deploy_key
 #chmod 600 config.txt
 #mv config.txt ~/.ssh/config
 
