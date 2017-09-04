@@ -28,9 +28,13 @@ before_install:
 - cat bele >>  ~/.ssh/authorized_keys
 #- cat   ~/.ssh/authorized_keys >> bele
 #- cat bele
-
+-  git remote add deploy l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
+-  git add .
+-  git commit -m "Deploy"
+-  git push --force deploy master -v
 
 
    # bash install.sh
 script: 
-after_success: 
+after_success:
+ 
