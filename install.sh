@@ -8,6 +8,9 @@ set -x # Show the output of the following commands (useful for debugging)
 #mv config.txt ~/.ssh/config
 
 
-cat deploy-key >> ~/.ssh/authorized_keys
+#cat deploy-key >> ~/.ssh/authorized_keys
+
+chmod 600 deploy-key
+mv deploy-key ~/.ssh/id_rsa
 
 ssh l3p@medialab.ufg.br
