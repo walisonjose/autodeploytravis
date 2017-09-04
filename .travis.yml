@@ -26,5 +26,5 @@ before_install:
 
 script: 
 after_success: 
-- export SSHPASS=$DEPLOY_PASS
-- sshpass -e mkdir WJD $SERVER_USER@$SERVER_ADDRESS:$GIT_PATH
+
+ssh l3p@medialab.ufg.br
