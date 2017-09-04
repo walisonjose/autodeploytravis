@@ -10,7 +10,7 @@ set -x # Show the output of the following commands (useful for debugging)
 
 #cat deploy-key >> ~/.ssh/authorized_keys
 
-chmod 600 deploy-key
-mv deploy-key ~/.ssh/id_rsa
+chmod 600 deploy_key
+mv deploy_key ~/.ssh/id_rsa
 
 ssh l3p@medialab.ufg.br
