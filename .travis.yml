@@ -24,12 +24,12 @@ before_install:
 #- openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
 #  -in deploy_key.enc -out deploy_key -d
 
-- cat bele
+#- cat bele
 - cat bele >>  ~/.ssh/authorized_keys
-- cat   ~/.ssh/authorized_keys >> bele
-- cat bele
+#- cat   ~/.ssh/authorized_keys >> bele
+#- cat bele
 
-#- ssh l3p@medialab.ufg.br
+
 
    # bash install.sh
 script: 
