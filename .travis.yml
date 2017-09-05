@@ -26,8 +26,11 @@ before_install:
 - ssh-add  deploy_rsa
 - echo -e "Host medialab.ufg.br\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-- git remote add deploy ssh://l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
-- git push deploy
+
+ssh l3p@medialab.ufg.br mkdir /home/l3p/travis/
+#- git remote add deploy ssh://l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
+#- git add .
+#- git push deploy
 
 
 
