@@ -27,7 +27,7 @@ before_install:
 
 - echo -e "Host medialab.ufg.br\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-ssh l3p@medialab.ufg.br
+- ssh l3p@medialab.ufg.br
 
 script: 
 after_success: 
