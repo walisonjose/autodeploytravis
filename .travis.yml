@@ -34,6 +34,7 @@ before_install:
 #- git commit -m "Deploy"
 #- git push  deploy master -v
 - git fetch deploy master
+- git pull  deploy master
 - git push deploy master
 
 
