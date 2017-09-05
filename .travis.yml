@@ -33,8 +33,8 @@ before_install:
 #- git add .
 #- git commit -m "Deploy"
 #- git push  deploy master -v
-- git fetch deploy master
-- git pull  --force deploy master
+- git fetch --all
+- git pull deploy master
 #- git push deploy master
 
 
