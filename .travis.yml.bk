@@ -20,14 +20,20 @@ git:
   submodules: false
 before_install:
 - openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
-- eval "$(ssh-agent -s)"
-- chmod 600 deploy_rsa
-- ssh-add  deploy_rsa
-
+  -in bele.enc -out bele -d
+#- openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
+#  -in deploy_key.enc -out deploy_key -d
 - echo -e "Host medialab.ufg.br\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+#- cat bele
+#- cat bele >>  ~/.ssh/authorized_keys
 
-ssh l3p@medialab.ufg.br
+-  git remote add deploy  ssh://l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
+-  git add .
+-  git commit -m "Deploy"
+-  git push --force deploy master -v
 
+
+   # bash install.sh
 script: 
-after_success: 
+after_success:
+ 
