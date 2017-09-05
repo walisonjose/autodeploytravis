@@ -39,6 +39,6 @@ before_install:
 
 #
 
-- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
+#- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
 script: 
 after_success: 
