@@ -37,7 +37,7 @@ before_install:
 #- git pull deploy master
 #- git push deploy master
 
-
+#
 
 - ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
 script: 
