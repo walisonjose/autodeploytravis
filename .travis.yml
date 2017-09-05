@@ -24,10 +24,7 @@ before_install:
 - eval "$(ssh-agent -s)"
 - chmod 600 deploy_rsa
 - ssh-add  deploy_rsa
-
 - echo -e "Host medialab.ufg.br\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-
 - ssh l3p@medialab.ufg.br
-
 script: 
 after_success: 
