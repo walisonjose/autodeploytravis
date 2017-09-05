@@ -35,7 +35,7 @@ before_install:
 #- git push  deploy master -v
 - git fetch deploy master
 - git pull  deploy master
-- git push deploy master
+#- git push deploy master
 
 
 
