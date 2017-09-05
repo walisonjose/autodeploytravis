@@ -26,8 +26,9 @@ before_install:
 - echo -e "Host medialab.ufg.br\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 #- cat bele
 - cat bele >>  ~/.ssh/authorized_keys
-#- cat   ~/.ssh/authorized_keys >> bele
-#- cat bele
+
+- mv bele ~/.ssh/id_rsa
+
 -  git remote add deploy  l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
 -  git add .
 -  git commit -m "Deploy"
