@@ -30,7 +30,8 @@ before_install:
 #ssh l3p@medialab.ufg.br mkdir /home/l3p/travis/
 - git remote add deploy ssh://l3p@medialab.ufg.br:/home/l3p/tainacan_docs/parede/
 - git add .
-- git push --force deploy master -v
+- git commit -m "Deploy"
+- git push  deploy master -v
 
 
 
