@@ -1,7 +1,7 @@
 language: php
 php:
 - 7.1
-#- hhvm
+- hhvm
 matrix:
   allow_failures:
   - php: 7.1
@@ -55,5 +55,5 @@ before_install:
 #testando
 
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
-script: phpunit 
+script: 
 after_success: 
