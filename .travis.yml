@@ -1,11 +1,11 @@
 language: php
 php:
 - 7.1
-- hhvm
+#- hhvm
 matrix:
   allow_failures:
   - php: 7.1
-  - php: hhvm
+  #- php: hhvm
   fast_finish: true
 cache:
   directories: 
