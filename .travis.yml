@@ -55,5 +55,5 @@ before_install:
 #testando
 
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
-script: phpunit --configuration phpunit.xml
+script: phpunit 
 after_success: 
