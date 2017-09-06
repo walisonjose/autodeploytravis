@@ -48,7 +48,7 @@ before_install:
 #- scp -r * l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
 #testando
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
-
+#asdasdsad
 before_script:
   - composer require atoum/atoum
   - composer self-update
