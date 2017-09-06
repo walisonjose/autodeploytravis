@@ -18,6 +18,10 @@ env:
   ssh_know_hosts: medialab.ufg.br
 git:
   submodules: false
+  
+  
+  
+  
 before_install:
 - openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
   -in deploy_rsa.enc -out deploy_rsa -d
@@ -37,7 +41,6 @@ before_install:
 
 
 
-
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
 - ssh l3p@medialab.ufg.br git clone https://github.com/walisonjose/parede.git /home/l3p/tainacan_docs/test/parede/
 #- git remote add deploy ssh://l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
@@ -52,5 +55,5 @@ before_install:
 #testando
 
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
-script: 
+script: phpunit --configuration phpunit.xml
 after_success: 
