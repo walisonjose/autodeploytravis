@@ -60,6 +60,6 @@ install:
 before_script:
     - composer self-update
     #- composer install
-script: phpunit
+script: phpunit --dont-report-useless-tests
 after_success: 
 after_script: 
