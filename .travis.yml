@@ -53,7 +53,7 @@ install:
   
 script: 
   
-  - phpunit --configuration phpunit.xml --coverage-text
+  
 
 notifications:
   on_success: never
