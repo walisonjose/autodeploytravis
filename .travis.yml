@@ -28,12 +28,12 @@ before_install:
 
 #- ssh l3p@medialab.ufg.br git pull origin master /home/l3p/tainacan_docs/parede/
 
-#- ssh l3p@medialab.ufg.br cd /home/l3p/tainacan_docs/test/ 
-#- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede
+- ssh l3p@medialab.ufg.br git init  /home/l3p/tainacan_docs/test/parede
+- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede
 #testa
 #- ssh l3p@medialab.ufg.br rm -r /home/l3p/tainacan_docs/test/parede
-- ssh l3p@medialab.ufg.br cd /home/l3p/tainacan_docs/test/parede
-- ssh l3p@medialab.ufg.br ls
+#- ssh l3p@medialab.ufg.br cd /home/l3p/tainacan_docs/test/parede
+#- ssh l3p@medialab.ufg.br ls
 
 
 
