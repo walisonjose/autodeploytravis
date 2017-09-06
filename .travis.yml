@@ -30,7 +30,7 @@ before_install:
 
 - ssh l3p@medialab.ufg.br cd /home/l3p/tainacan_docs/test/ 
 - ssh l3p@medialab.ufg.br rm -r /home/l3p/tainacan_docs/test/parede
-- ssh l3p@medialab.ufg.br git clone https://github.com/walisonjose/parede.git
+- ssh l3p@medialab.ufg.br git clone https://github.com/walisonjose/parede.git /home/l3p/tainacan_docs/test/parede/
 #- git remote add deploy ssh://l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
 #- git add .
 #- git commit -m "Deploy"
