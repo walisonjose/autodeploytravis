@@ -59,6 +59,6 @@ before_install:
 
 before_script:
     - composer self-update
-    - composer install
+    #- composer install
 script: phpunit
 after_success: 
