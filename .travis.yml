@@ -2,12 +2,8 @@ language: php
 
 php:
 - 7.1
-- hhvm
+- hhvm-3.21
 - nightly
-
-php
-  - hhvm-3.21
-  - hhvm-nightly
 
 matrix:
   allow_failures:
