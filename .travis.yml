@@ -1,26 +1,25 @@
 language: php
+
 php:
 - 7.1
 - hhvm
+- nightly
+
+php
+  - hhvm-3.21
+  - hhvm-nightly
+
 matrix:
   allow_failures:
-  - php: 7.1
-  - php: hhvm
+    - php: 7.1
+    - php: hhvm
   fast_finish: true
-cache:
-  directories: 
-notifications:
-  on_success: never
-  on_failure: always
-env:
-  global: 
-  addons: 
-  ssh_know_hosts: medialab.ufg.br
+
+addons:
+  - ssh_know_hosts: medialab.ufg.br
+  
 git:
-  submodules: false
-  
-  
-  
+  submodules: false    
   
 before_install:
 - openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
@@ -29,18 +28,13 @@ before_install:
 - chmod 600 deploy_rsa
 - ssh-add  deploy_rsa
 - echo -e "Host medialab.ufg.br\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-
 #- ssh l3p@medialab.ufg.br git pull origin master /home/l3p/tainacan_docs/parede/
-
 #- ssh l3p@medialab.ufg.br git init  /home/l3p/tainacan_docs/test/parede
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede
 #testa
 - ssh l3p@medialab.ufg.br rm -r /home/l3p/tainacan_docs/test/parede
 #- ssh l3p@medialab.ufg.br cd /home/l3p/tainacan_docs/test/parede
 #- ssh l3p@medialab.ufg.br ls
-
-
-
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
 - ssh l3p@medialab.ufg.br git clone https://github.com/walisonjose/parede.git /home/l3p/tainacan_docs/test/parede/
 #- git remote add deploy ssh://l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
@@ -53,13 +47,18 @@ before_install:
 #- git pull 
 #- scp -r * l3p@medialab.ufg.br:/home/l3p/tainacan_docs/test/parede/
 #testando
-
 #- ssh l3p@medialab.ufg.br git pull /home/l3p/tainacan_docs/test/parede/
 
-install:
 before_script:
-    - composer self-update
-    #- composer install
-script: phpunit --dont-report-useless-tests
-after_success: 
-after_script: 
+  - composer require atoum/atoum
+  - composer self-update
+  
+install: php vendor/vendors.php
+  
+script: 
+  - vendor/bin/atoum
+  - phpunit --configuration phpunit.xml --coverage-text
+
+notifications:
+  on_success: never
+  on_failure: always
