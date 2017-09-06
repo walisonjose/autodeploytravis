@@ -49,7 +49,7 @@ before_script:
   - composer require atoum/atoum
   - composer self-update
   
-install: php vendor/vendors.php
+install: 
   
 script: 
   - vendor/bin/atoum
