@@ -3,28 +3,20 @@ language: php
 
 php:
 - 7.1
-- hhvm-3.21
-- nightly
 
 matrix:
   allow_failures:
     - php: 7.1
-    - php: hhvm
+    
   fast_finish: true
 
 addons:
   - ssh_know_hosts: medialab.ufg.br
-  
-git:
-  submodules: false    
-  
+     
  install:
-  - composer self-update
-  #- composer install
-
-script:
-  #- ./vendor/bin/phpunit tests 
   
+script:
+   
 after_success:
 - openssl aes-256-cbc -K $encrypted_c31ae1205a54_key -iv $encrypted_c31ae1205a54_iv
   -in deploy_rsa.enc -out deploy_rsa -d
@@ -57,9 +49,9 @@ after_success:
 #asdasdsad
 
 cache:
-  directories:
-  - vendor
-  - $HOME/.cache/composer
+ # directories:
+  #- vendor
+  #- $HOME/.cache/composer
    
  notifications:
   email:
