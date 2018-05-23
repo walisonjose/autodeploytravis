@@ -13,7 +13,7 @@ matrix:
 addons:
   - ssh_know_hosts: medialab.ufg.br
      
- install:
+ install: 
   
 script:
    
